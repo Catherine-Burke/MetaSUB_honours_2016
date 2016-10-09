@@ -1,0 +1,72 @@
+#SampleID	BarcodeSequence	LinkerPrimerSequence	run_prefix	Type	Surface	Station	Time	Ventilation	Human	Description
+#Mapping_file_for_QIIME.analysis										
+C_S1				station	seat	Central	0	Aboveground	NA	control
+C_S2				station	seat	Central	0	Aboveground	NA	control
+C_S3				station	seat	Central	0	Aboveground	NA	control
+T_S1				station	seat	Town Hall	0	Underground	NA	control
+T_S2				station	seat	Town Hall	0	Underground	NA	control
+T_S3				station	seat	Town Hall	0	Underground	NA	control
+W_S1				station	seat	Wynyard	0	Underground	NA	control
+W_S2				station	seat	Wynyard	0	Underground	NA	control
+W_S3				station	seat	Wynyard	0	Underground	NA	control
+CQ_S1				station	seat	Circular Quay	0	Aboveground	NA	control
+CQ_S2				station	seat	Circular Quay	0	Aboveground	NA	control
+CQ_S3				station	seat	Circular Quay	0	Aboveground	NA	control
+SJ_S1				station	seat	St James	0	Underground	NA	control
+SJ_S2				station	seat	St James	0	Underground	NA	control
+SJ_S3				station	seat	St James	0	Underground	NA	control
+M_S1				station	seat	Museum	0	Underground	NA	control
+M_S2				station	seat	Museum	0	Underground	NA	control
+M_S3				station	seat	Museum	0	Underground	NA	control
+C_H1				station	handrail	Central	0	Aboveground	NA	control
+C_H2				station	handrail	Central	0	Aboveground	NA	control
+C_H3				station	handrail	Central	0	Aboveground	NA	control
+T_H1				station	handrail	Town Hall	0	Underground	NA	control
+T_H2				station	handrail	Town Hall	0	Underground	NA	control
+T_H3				station	handrail	Town Hall	0	Underground	NA	control
+W_H1				station	handrail	Wynyard	0	Underground	NA	control
+W_H2				station	handrail	Wynyard	0	Underground	NA	control
+W_H3				station	handrail	Wynyard	0	Underground	NA	control
+CQ_H1				station	handrail	Circular Quay	0	Aboveground	NA	control
+CQ_H2				station	handrail	Circular Quay	0	Aboveground	NA	control
+SJ_H1				station	handrail	St James	0	Underground	NA	control
+SJ_H2				station	handrail	St James	0	Underground	NA	control
+SJ_H3				station	handrail	St James	0	Underground	NA	control
+CQ_H3				station	handrail	Circular Quay	0	Underground	NA	control
+M_H1				station	handrail	Museum	0	Underground	NA	control
+M_H2				station	handrail	Museum	0	Underground	NA	control
+M_H3				station	handrail	Museum	0	Underground	NA	control
+C_B1				station	bin	Central	0	Aboveground	NA	control
+C_B2				station	bin	Central	0	Aboveground	NA	control
+T_B1				station	bin	Town Hall	0	Underground	NA	control
+T_B2				station	bin	Town Hall	0	Underground	NA	control
+CQ_B1				station	bin	Circular Quay	0	Aboveground	NA	control
+CQ_B2				station	bin	Circular Quay	0	Aboveground	NA	control
+SJ_B1				station	bin	St James	0	Underground	NA	control
+SJ_B2				station	bin	St James	0	Underground	NA	control
+M_B1				station	bin	Museum	0	Underground	NA	control
+M_B2				station	bin	Museum	0	Underground	NA	control
+V1_1L				volunteer	left hand	NA	1	NA	1	control
+V1_1R				volunteer	right hand	NA	1	NA	1	control
+V2_1L				volunteer	left hand	NA	1	NA	2	control
+V2_1R				volunteer	right hand	NA	1	NA	2	control
+V3_1L				volunteer	left hand	NA	1	NA	3	control
+V3_1R				volunteer	right hand	NA	1	NA	3	control
+V1_2L				volunteer	left hand	NA	2	NA	1	control
+V1_2R				volunteer	right hand	NA	2	NA	1	control
+V2_2L				volunteer	left hand	NA	2	NA	2	control
+V2_2R				volunteer	right hand	NA	2	NA	2	control
+V3_2L				volunteer	left hand	NA	2	NA	3	control
+V3_2R				volunteer	right hand	NA	2	NA	3	control
+V1_5L				volunteer	left hand	NA	5	NA	1	control
+V1_5R				volunteer	right hand	NA	5	NA	1	control
+V2_5L				volunteer	left hand	NA	5	NA	2	control
+V2_5R				volunteer	right hand	NA	5	NA	2	control
+V3_5L				volunteer	left hand	NA	5	NA	3	control
+V3_5R				volunteer	right hand	NA	5	NA	3	control
+N_1				negative	air	Central	0	Aboveground	NA	control
+N_2				negative	air	Central	0	Aboveground	NA	control
+N_3				negative	air	Circular Quay	0	Aboveground	NA	control
+UN_1				negative	air	Town Hall	0	Underground	NA	control
+UN_2				negative	air	Wynyard	0	Underground	NA	control
+UN_3				negative	air	St James	0	Underground	NA	control

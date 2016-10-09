@@ -1,0 +1,65 @@
+Quality filtering with Usearch
+
+	usearch -fastq_filter <name_of_fastq_file> -fastq_maxee 2 -fastaout seqs_filtered.fna -fastaout_discarded seqs_filtered_discarded.fna
+
+
+De-replicate sequences:
+
+	usearch -derep_fulllength seqs_filtered.fna --fastaout seqs_unique.fna -sizeout
+		
+		
+Then sort by size and remove singletons
+
+	usearch -sortbysize seqs_unique.fna -fastaout seqs_unique_sorted.fna -minsize 2
+		
+		
+Now cluster OTUs on the de-replicated file without singletons
+
+	nohup usearch -cluster_otus seqs_unique_sorted.fna -otus otus.fa -uparseout out_results.txt -relabel OTU_ -sizein -sizeout &
+		
+Now map all seqs to OTUs - needed to download the latest version of usearch for this:
+	
+	usearch -usearch_global <either: quality filtered fasta, or original fastq> -db otus.fa -strand plus -id 0.97 -biomout otu_table_uparse.biom
+	
+Summarise data from OTU tables
+		
+	biom summarize-table -i otu_table_uparse.biom
+	
+		
+
+	biom summarize-table -i cochlear2_uparse.biom --qualitative
+		
+		
+
+Now assign taxonomy using RDP with 0.5 confidence cut off and greenegenes database
+
+	nohup assign_taxonomy.py -i otus.fa -m rdp -c 0.5 -o otus_tax --rdp_max_memory 2000 &
+	
+*****You might not need this!!  Check taxonomy file to see if a size label is appended to the OTU names********Remove extra info from OTU name in taxonomy file
+
+	sed -i 's/;size=[0-9]*;//g' otus_tax/otus_tax_assignments.txt
+
+Add taxonomy metadata to biom file
+	
+	biom add-metadata -i otu_table_uparse.biom --observation-metadata-fp otus_tax/otus_tax_assignments.txt -o otu_table_uparse_tax.biom --sc-separated taxonomy --observation-header OTUID,taxonomy
+	
+Align seqs and remove bad alignments from otu table
+	
+	align_seqs.py -i otus.fa -o aligned_seqs
+	
+	grep -c '>' aligned_seqs/otus_failures.fasta 
+		12
+	grep -c '>' aligned_seqs/otus_aligned.fasta
+	
+*******You might not need this!!******Remove extra info from otu name in fasta file
+	
+	sed -i 's/;size=[0-9]*;//g' aligned_seqs/otus_failures.fasta
+	
+Filter OTUs which don't align to 16S from otu table
+	
+	filter_otus_from_otu_table.py -i otu_table_uparse_tax.biom -e aligned_seqs/otus_failures.fasta -o otu_table_uparse_tax_goodalign.biom
+	
+	biom summarize_table -i otu_table_uparse_tax_goodalign.biom 
+	biom summarize_table -i otu_table_uparse_tax_goodalign.biom
+	
+

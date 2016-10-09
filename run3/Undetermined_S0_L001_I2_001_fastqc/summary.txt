@@ -1,0 +1,12 @@
+PASS	Basic Statistics	Undetermined_S0_L001_I2_001.fastq.gz
+PASS	Per base sequence quality	Undetermined_S0_L001_I2_001.fastq.gz
+PASS	Per tile sequence quality	Undetermined_S0_L001_I2_001.fastq.gz
+PASS	Per sequence quality scores	Undetermined_S0_L001_I2_001.fastq.gz
+FAIL	Per base sequence content	Undetermined_S0_L001_I2_001.fastq.gz
+FAIL	Per sequence GC content	Undetermined_S0_L001_I2_001.fastq.gz
+PASS	Per base N content	Undetermined_S0_L001_I2_001.fastq.gz
+PASS	Sequence Length Distribution	Undetermined_S0_L001_I2_001.fastq.gz
+FAIL	Sequence Duplication Levels	Undetermined_S0_L001_I2_001.fastq.gz
+FAIL	Overrepresented sequences	Undetermined_S0_L001_I2_001.fastq.gz
+WARN	Adapter Content	Undetermined_S0_L001_I2_001.fastq.gz
+PASS	Kmer Content	Undetermined_S0_L001_I2_001.fastq.gz
